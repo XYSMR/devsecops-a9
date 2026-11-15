@@ -25,5 +25,6 @@ def run(cmd):
 
 
 def login(username, password):
-    print("Login attempt:", username, password)
+    # Never log the password; log only the username
+    print("Login attempt:", username)
     return password == PASSWORD
