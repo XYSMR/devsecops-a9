@@ -22,3 +22,8 @@ def run(cmd):
     # shell=False with an argument list prevents shell injection
     args = shlex.split(cmd)
     return subprocess.call(args, shell=False)  # noqa: S603 - no shell is used
+
+
+def login(username, password):
+    print("Login attempt:", username, password)
+    return password == PASSWORD
